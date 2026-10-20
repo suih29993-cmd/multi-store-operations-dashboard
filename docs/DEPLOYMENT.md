@@ -35,6 +35,15 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Open `http://127.0.0.1:8000/`.
 
+## Current public deployment
+
+- Pages project: `multi-store-operations-dashboard`
+- Production URL: https://multi-store-operations-dashboard.pages.dev/
+- Artifact: the generated `public/` build of the committed synthetic dataset
+- Deployment mode: direct upload; no Git integration, account email, token or secret is stored in the repository
+
+The production URL was verified with browser automation for the three views, seven KPI cards, nine Bottom-5 rows, filter panels and mobile layout.
+
 ## Cloudflare Pages (recommended)
 
 Cloudflare Pages can serve `public/` as a static site without a runtime build.

@@ -11,6 +11,9 @@ private_input/
 *.xls
 *.csv.tmp
 
+# Wrangler local state
+.wrangler/
+
 # Environment and credentials
 .env
 .env.*
