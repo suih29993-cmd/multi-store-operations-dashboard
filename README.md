@@ -1,8 +1,31 @@
 # Multi-store Operations Dashboard
 
+[![dashboard-ci](https://github.com/suih29993-cmd/multi-store-operations-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/suih29993-cmd/multi-store-operations-dashboard/actions/workflows/ci.yml)
+
+`Python 3.11+` · `Synthetic data` · `No third-party frontend libraries`
+
 An offline, self-contained operations dashboard for multi-store performance analysis. The public version uses fully synthetic data and is designed to demonstrate data validation, metric derivation, aggregation, responsive visualization and local deployment.
 
 > **Data notice:** every store, city, supervisor, score and rate in this repository is fictional and generated from a fixed seed. No production dataset, internal report, customer record or company account is required. The numbers are not real business results.
+
+![Desktop dashboard preview](docs/screenshots/dashboard-desktop.png)
+
+<details>
+<summary>Mobile preview</summary>
+
+<p align="center">
+  <img src="docs/screenshots/dashboard-mobile.png" width="360" alt="Mobile dashboard preview">
+</p>
+</details>
+
+Screenshots use the committed synthetic dataset.
+
+## At a glance
+
+- Three synthetic reporting periods with 60 stores per period and period-over-period deltas.
+- Two synthetic regions, six demo cities and eight supervisors.
+- Six KPI cards, an inline SVG trend chart, sortable ranking, Bottom-5 analysis and CSV export.
+- Five unit tests; CI regenerates inputs, validates the payload, runs tests and rebuilds the page.
 
 ## Features
 
@@ -35,6 +58,8 @@ python server.py
 ```
 
 Open `http://127.0.0.1:8000` if the browser does not open automatically. You can also open the included `dashboard.html` directly because the page is self-contained and embeds only the synthetic payload.
+
+The generator is deterministic. Re-running the commands reproduces the same synthetic stores and metrics without any external file or account.
 
 ## Validation
 
