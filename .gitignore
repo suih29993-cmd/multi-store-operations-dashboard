@@ -1,0 +1,31 @@
+# Generated deployment directory
+public/
+
+# data.json and dashboard.html are included synthetic demo artifacts
+# so the dashboard can be previewed immediately without a build step.
+
+# Private or local source data
+private_input/
+*.xlsx
+*.xls
+*.csv.tmp
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+
+# Python and editor files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Logs and OS files
+*.log
+Thumbs.db
+.DS_Store
