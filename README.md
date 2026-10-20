@@ -1,4 +1,4 @@
-# Multi-store Operations Dashboard
+# Multi-Store Operations Dashboard
 
 **Live demo:** [https://multi-store-operations-dashboard.pages.dev/](https://multi-store-operations-dashboard.pages.dev/)
 
@@ -6,7 +6,7 @@
 
 `Python 3.11+` · `Synthetic data` · `No third-party frontend libraries`
 
-An offline, self-contained operations dashboard for multi-store performance analysis. The public demo keeps the original three-view dashboard layout and interaction model while replacing all business data with deterministic synthetic records.
+An offline, self-contained business analytics dashboard for multi-store performance analysis. The public demo keeps the original three-view dashboard layout and interaction model while replacing all business data with deterministic synthetic records.
 
 > **Data notice:** every store, city, supervisor, score and rate in this repository is fictional and generated from a fixed seed. No production dataset, internal report, customer record or company account is required. The numbers are not real business results.
 
@@ -21,6 +21,12 @@ An offline, self-contained operations dashboard for multi-store performance anal
 </details>
 
 Screenshots use the committed synthetic dataset.
+
+## Business questions this project answers
+
+- Which regions and stores improved or declined between reporting periods?
+- How do store-level quality and service indicators aggregate by region, city, and supervisor?
+- Where are the lowest-performing stores concentrated, and how do channel metrics compare?
 
 ## Restored dashboard experience
 
