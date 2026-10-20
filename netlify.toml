@@ -1,5 +1,5 @@
 [build]
-  command = "python build_data.py && python generate_html.py && mkdir -p public && cp dashboard.html public/index.html && cp assets/logo.svg public/logo.svg"
+  command = "python build_data.py && python generate_html.py && python scripts/prepare_static.py"
   publish = "public"
 
 [build.environment]

@@ -44,7 +44,7 @@ def build_row(period_idx: int, period: tuple[str, str, str], store_idx: int) -> 
     store_effect = ((store_idx * 37) % 23 - 11) / 100.0
     period_effect = [0.00, 0.04, 0.08][period_idx]
     region_effect = 0.05 if region == "Region_A" else 0.0
-    center = 4.24 + store_effect + period_effect + region_effect
+    center = 4.45 + store_effect + period_effect + region_effect
 
     def score() -> tuple[float, float]:
         current = clamp(center + rng.uniform(-0.18, 0.18), 3.55, 4.95)

@@ -1,5 +1,6 @@
 # Generated deployment directory
 public/
+deploy/*.zip
 
 # data.json and dashboard.html are included synthetic demo artifacts
 # so the dashboard can be previewed immediately without a build step.

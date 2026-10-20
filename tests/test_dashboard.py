@@ -51,6 +51,25 @@ class DashboardDataTests(unittest.TestCase):
         self.assertIn("Synthetic demo data", text)
         self.assertNotRegex(text, r"C:[\\/]Users[\\/]")
 
+    def test_generator_maps_synthetic_fields_to_original_ui_contract(self):
+        import generate_html
+
+        payload = generate_html.load_payload()
+        store = payload["periods"][payload["defaultPeriod"]]["stores"][0]
+        self.assertIn("mt_score", store["metrics"])
+        self.assertIn("sg_score", store["metrics"])
+        self.assertEqual(store["status"], "营业中")
+        self.assertNotIn("channel_a_score", store["metrics"])
+        self.assertIn("mtMatched", payload["periods"][payload["defaultPeriod"]]["meta"])
+
+    def test_dashboard_keeps_three_view_structure_and_neutral_assets(self):
+        html = (ROOT / "dashboard.html").read_text(encoding="utf-8")
+        for marker in ("id=\"v1\"", "id=\"v3\"", "id=\"v2\"", "id=\"regionCards\"", "id=\"bottom3\"", "id=\"storeView\"", "id=\"supTable\""):
+            self.assertIn(marker, html)
+        self.assertIn("Northline", html)
+        self.assertNotIn("\u559c\u8336", html)
+        self.assertNotIn("fonts.googleapis.com", html)
+
 
 if __name__ == "__main__":
     unittest.main()
