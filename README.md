@@ -1,5 +1,7 @@
 # Multi-store Operations Dashboard
 
+**Live demo:** [https://multi-store-operations-dashboard.pages.dev/](https://multi-store-operations-dashboard.pages.dev/)
+
 [![dashboard-ci](https://github.com/suih29993-cmd/multi-store-operations-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/suih29993-cmd/multi-store-operations-dashboard/actions/workflows/ci.yml)
 
 `Python 3.11+` · `Synthetic data` · `No third-party frontend libraries`
